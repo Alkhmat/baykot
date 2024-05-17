@@ -1,5 +1,7 @@
+import 'package:baykot/data/cubits/photo_picker/image_cubit.dart';
 import 'package:baykot/view/auth/register_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const Baykot());
@@ -10,9 +12,16 @@ class Baykot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: RegisterView(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => ImageCubit(),
+        ),
+      ],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: RegisterView(),
+      ),
     );
   }
 }
