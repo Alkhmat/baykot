@@ -17,6 +17,9 @@ class _RegisterViewState extends State<RegisterView> {
       TextEditingController();
   final TextEditingController _subscriptionDateController =
       TextEditingController();
+  final TextEditingController _notecontroller = TextEditingController();
+  final TextEditingController _siteurlcontrok = TextEditingController();
+  final TextEditingController _costeController = TextEditingController();
 
   Future<void> _selectDate(
       BuildContext context, TextEditingController controller) async {
@@ -113,6 +116,7 @@ class _RegisterViewState extends State<RegisterView> {
               ),
               AuthTextFieled(
                 h: h,
+                controller: _costeController,
                 labelText: 'Cost',
               ),
               SizedBox(
@@ -121,6 +125,7 @@ class _RegisterViewState extends State<RegisterView> {
               AuthTextFieled(
                 h: h,
                 labelText: 'Site URL',
+                controller: _siteurlcontrok,
               ),
               SizedBox(
                 height: h * 0.02,
@@ -128,6 +133,7 @@ class _RegisterViewState extends State<RegisterView> {
               AuthTextFieled(
                 h: h,
                 labelText: 'Note',
+                controller: _notecontroller,
               ),
               SizedBox(
                 height: h * 0.02,

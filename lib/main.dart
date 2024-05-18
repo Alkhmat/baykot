@@ -1,5 +1,6 @@
 import 'package:baykot/data/cubits/photo_picker/image_cubit.dart';
-import 'package:baykot/view/auth/register_view.dart';
+
+import 'package:baykot/view/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +21,7 @@ class Baykot extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: RegisterView(),
+        home: HomeView(),
       ),
     );
   }
