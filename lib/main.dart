@@ -1,4 +1,5 @@
 import 'package:baykot/data/cubits/photo_picker/image_cubit.dart';
+import 'package:baykot/data/cubits/tap/tap_cubit.dart';
 
 import 'package:baykot/view/home/home_view.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,9 @@ class Baykot extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => ImageCubit(),
+        ),
+        BlocProvider(
+          create: (context) => ClickCubit(),
         ),
       ],
       child: const MaterialApp(
